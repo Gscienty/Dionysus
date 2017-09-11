@@ -1,0 +1,19 @@
+{
+  "entry": "src/index.js",
+  "proxy": {
+    "/api": { "target": "http://localhost:8080", "pathRewrite": { "^/api": "" } }
+  },
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime"
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    }
+  }
+}
