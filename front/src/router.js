@@ -6,6 +6,7 @@ function RouterConfig({ history }) {
         <Router history={history}>
             <Route path="/" component={ require('./routes/hello') } />
             <Route path="/home" component={ require('./routes/home') } />
+            <Route path="/ticket" component={ require('./routes/ticket') } />
             <Route path="/not-done-yet" component={ require('./routes/notdoneyet') } />
         </Router>
     );

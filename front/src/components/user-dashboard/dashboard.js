@@ -47,7 +47,7 @@ export default class DashboardComponent extends Component {
                         Chat
                     </MenuItem>
                     <MenuItem
-                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/ticket')) }) }
                         leftIcon={ <ReceiptIcon /> }>
                         Ticket
                     </MenuItem>
