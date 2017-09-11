@@ -4,7 +4,7 @@ import DashboardComponent from '../components/user-dashboard/dashboard';
 import HomeComponent from '../components/user-dashboard/home';
 import { routerRedux } from 'dva/router';
 
-export default connect()(({ dispatch }) => <DashboardComponent>
+export default connect()(({ dispatch }) => <DashboardComponent dispatch={ dispatch }>
     <HomeComponent 
         chatting={
             () => {

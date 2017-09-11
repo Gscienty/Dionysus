@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { routerRedux } from 'dva/router';
 import AppBar from 'material-ui/AppBar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import CloudIcon from 'material-ui/svg-icons/file/cloud';
@@ -21,7 +22,13 @@ import Divider from 'material-ui/Divider';
 export default class DashboardComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = { feedbackMessage: '', drawerOpenFlag: false };
+        this.state = { drawerOpenFlag: false };
+    }
+
+    onClickMenu(func) {
+
+        this.setState({ drawerOpenFlag: false });
+        func();
     }
 
     render() {
@@ -34,12 +41,36 @@ export default class DashboardComponent extends Component {
                     onRequestChange={ () => this.setState({ drawerOpenFlag: false }) }>
                     <h1 style={{ textAlign: 'center', color: 'rgba(0, 0, 0, 0.4)' }}>DIONYSUS</h1>
                     <Divider />
-                    <MenuItem leftIcon={ <ChatIcon /> }>Chat</MenuItem>
-                    <MenuItem leftIcon={ <ReceiptIcon /> }>Ticket</MenuItem>
-                    <MenuItem leftIcon={ <MailIcon /> }>Mail</MenuItem>
-                    <MenuItem leftIcon={ <SecurityIcon /> }>Security</MenuItem>
-                    <MenuItem leftIcon={ <FlagIcon /> }>FAQ</MenuItem>
-                    <MenuItem leftIcon={ <PowerSettingsNewIcon /> }>Quit</MenuItem>
+                    <MenuItem
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        leftIcon={ <ChatIcon /> }>
+                        Chat
+                    </MenuItem>
+                    <MenuItem
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        leftIcon={ <ReceiptIcon /> }>
+                        Ticket
+                    </MenuItem>
+                    <MenuItem
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        leftIcon={ <MailIcon /> }>
+                        Mail
+                    </MenuItem>
+                    <MenuItem
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        leftIcon={ <SecurityIcon /> }>
+                        Security
+                    </MenuItem>
+                    <MenuItem
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        leftIcon={ <FlagIcon /> }>
+                        FAQ
+                    </MenuItem>
+                    <MenuItem
+                        onClick={ e => this.onClickMenu(() => { this.props.dispatch(routerRedux.push('/not-done-yet')) }) }
+                        leftIcon={ <PowerSettingsNewIcon /> }>
+                        Quit
+                    </MenuItem>
                 </Drawer>
             </MuiThemeProvider>
             <MuiThemeProvider>
