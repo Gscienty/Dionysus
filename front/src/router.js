@@ -8,6 +8,7 @@ function RouterConfig({ history }) {
             <Route path="/home" component={ require('./routes/home') } />
             <Route path="/ticket" component={ require('./routes/ticket') } />
             <Route path="/not-done-yet" component={ require('./routes/notdoneyet') } />
+            <Route path="/chat" component={ require('./routes/chat') } />
         </Router>
     );
 }

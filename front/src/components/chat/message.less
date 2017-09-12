@@ -1,0 +1,43 @@
+.message-box {
+    padding: 0 10px;
+    width: 100%;
+}
+
+.message-nick-name {
+    padding: 0 2px;
+    display: block;
+    font-size: 14px;
+    color: #5f6265;
+}
+
+.message-content {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    text-align: left;
+    padding: 6px 12px;
+    max-width: 90%;
+    min-height: 35px;
+    border: 1 solid #cccccc;
+    border-radius: 8px;
+}
+
+.triangle-left-outer {
+    left: -9px;
+    border-right: 10px solid #cccccc;
+    top: 5px;
+}
+
+.triangle-left-inner {
+    left: -7px;
+    border-right: 10px solid #ffffff;
+    top: 6px;
+}
+
+.triangle-left-outer, .triangle-left-inner {
+    content: "";
+    transform: rotate(20deg);
+    position: absolute;
+    border-top: 2px solid transparent;
+    border-bottom: 7px solid transparent;
+}

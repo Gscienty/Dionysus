@@ -10,8 +10,8 @@ export default connect(({ ticket }) => ({ ticket }))(({ ticket, dispatch }) => <
         createTicket={
             () => {
                 return {
-                    title: "failure",
-                    message: "cannot create a new ticket."
+                    title: "Failure",
+                    message: "Cannot create a new ticket."
                 }
             }
         } />
