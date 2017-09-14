@@ -76,12 +76,13 @@ export default class DashboardComponent extends Component {
             <MuiThemeProvider>
                 <AppBar
                     title="Dionysus"
+                    style={{ display: 'flex' }}
                     iconElementLeft={ <IconButton><CloudIcon /></IconButton> }
                     iconElementRight={<IconButton onClick={ () => this.setState({ drawerOpenFlag: true }) }><MoreVertIcon /></IconButton> } />
             </MuiThemeProvider>
             <div>
                 { this.props.children }
-                <p style={{ textAlign: 'center', color: 'rgba(0, 0, 0, 0.4)' }}>Developed by Dionysvs</p>
+                <p style={{ display: 'none', textAlign: 'center', color: 'rgba(0, 0, 0, 0.4)' }}>Developed by Dionysvs</p>
             </div>
         </div>
     }

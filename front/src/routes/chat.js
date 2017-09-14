@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import DashboardComponent from '../components/user-dashboard/dashboard';
 import Message from '../components/chat/message-component';
 import MessageContainer from '../components/chat/message-container-component';
+import MessageInput from '../components/chat/message-input';
 import { routerRedux } from 'dva/router';
 
 export default connect()(({ dispatch }) => <DashboardComponent dispatch={ dispatch }>
@@ -11,5 +12,34 @@ export default connect()(({ dispatch }) => <DashboardComponent dispatch={ dispat
         <Message other nickname='Bob' message='hello' />
         <Message nickname='Alice' message='this is Alice' />
         <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
+        <Message nickname='Alice' message='hi' />
+        <Message other nickname='Bob' message='hello' />
+        <Message nickname='Alice' message='this is Alice' />
+        <Message other nickname='Bob' message='this is Bob' />
     </MessageContainer>
+    <MessageInput />
 </DashboardComponent>);

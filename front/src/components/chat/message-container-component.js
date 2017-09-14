@@ -8,10 +8,11 @@ export default class MessageContainerComponent extends Component {
     render() {
         return <div style={{
             ...this.props.style,
-            height: 'calc((100% - 121px) - 0px)',
+            height: 'calc((' + window.innerHeight + 'px - 142px) - 0px)',
             position: 'relative',
             zIndex: 10,
-            transition: 'all .25s ease-in-out'
+            transition: 'all .25s ease-in-out',
+            overflow: 'scroll'
         }}>
             { this.props.children }
         </div>
