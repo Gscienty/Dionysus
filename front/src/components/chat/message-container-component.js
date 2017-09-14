@@ -5,10 +5,13 @@ export default class MessageContainerComponent extends Component {
     constructor(props) {
         super(props);
     }
+    componentDidMount() {
+        this.refs.container.scrollTop = this.refs.container.scrollHeight;
+    }
     render() {
-        return <div style={{
+        return <div ref="container" style={{
             ...this.props.style,
-            height: 'calc((' + window.innerHeight + 'px - 142px) - 0px)',
+            height: `calc(${window.screen.availHeight}px - 263px)`,
             position: 'relative',
             zIndex: 10,
             transition: 'all .25s ease-in-out',

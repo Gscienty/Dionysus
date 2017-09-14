@@ -12,13 +12,13 @@ export default class MessageInputComponent extends Component {
     render() {
         return <div style={{
             background: '#f5f1ee',
-            padding: '10px 19px',
+            padding: '5px',
             display: 'flex'
         }}>
             <MuiThemeProvider>
-                <TextField style={{
+                <TextField ref="messageInput" style={{
                     background: '#ffffff',
-                    fontSize: 21,
+                    fontSize: 16,
                     width: 'calc(100% - 65px)',
                     overflow: 'hidden',
                     border: 'none',
@@ -26,13 +26,20 @@ export default class MessageInputComponent extends Component {
                     borderBottomLeftRadius: 10,
                     borderBottomRightRadius: 10,
                     borderTopRightRadius: 10,
-                    padding: '5px 5px 5px 5px'
+                    padding: '5px',
+                    marginLeft: '1em',
+                    marginRight: '1em'
                 }} />
             </MuiThemeProvider>
             <MuiThemeProvider>
                 <IconButton
-                    style={{ width: 36, height: 36 }}
-                    iconStyle={{ width: 36, height: 36 }}><SendIcon /></IconButton>
+                    style={{ width: 56, height: 56 }}
+                    iconStyle={{ width: 28, height: 28 }}
+                    onClick={
+                        () => {
+                            this.refs.messageInput.focus();
+                        }
+                    }><SendIcon /></IconButton>
             </MuiThemeProvider>
         </div>;
     }
